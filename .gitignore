@@ -1,1 +1,5 @@
+# build files
 node_modules
+
+# secrets
+.env
