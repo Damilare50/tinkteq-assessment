@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "role-based access control task",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start:dev": "nodemon index.js",
     "start:prod": "node index.js",
@@ -27,5 +28,8 @@
   "homepage": "https://github.com/Damilare50/tinkteq-assessment#readme",
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
