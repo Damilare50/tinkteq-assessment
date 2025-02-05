@@ -4,6 +4,7 @@ import { mongoUri } from './config/database.js';
 import mongoose from 'mongoose';
 import helmet from 'helmet';
 import cors from 'cors';
+import { authRouter } from './src/routers/auth.js';
 
 const appPort = parseInt(process.env.PORT);
 
@@ -15,6 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(cors());
+
+//routes
+app.use('/api/auth', authRouter);
 
 // connect to db
 mongoose
