@@ -5,7 +5,7 @@ import {
   loginValidator,
   registerValidator,
   whoamiValidator,
-} from '../validators/auth/index.js';
+} from '../validators/auth.js';
 
 const router = express.Router();
 

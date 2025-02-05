@@ -1,5 +1,5 @@
 import { body, header } from 'express-validator';
-import { USER_ROLES } from '../../constants/index.js';
+import { USER_ROLES } from '../constants/index.js';
 
 export const registerValidator = [
   body('email').isEmail().withMessage('Invalid email format').normalizeEmail(),
