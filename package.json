@@ -1,0 +1,25 @@
+{
+  "name": "tinkteq-assessment",
+  "version": "1.0.0",
+  "description": "role-based access control task",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Damilare50/tinkteq-assessment.git"
+  },
+  "keywords": [
+    "task",
+    "api",
+    "rbac",
+    "node"
+  ],
+  "author": "Dami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Damilare50/tinkteq-assessment/issues"
+  },
+  "homepage": "https://github.com/Damilare50/tinkteq-assessment#readme"
+}
