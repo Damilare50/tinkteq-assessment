@@ -15,7 +15,7 @@ export const register = async (req, res) => {
     let user = await User.findOne({ email });
     if (user) {
       return res
-        .status(419)
+        .status(400)
         .json({ success: false, message: 'user already exist', data: null });
     }
 
@@ -85,13 +85,11 @@ export const login = async (req, res) => {
  */
 export const whoami = async (req, res) => {
   try {
-    return res
-      .status(200)
-      .json({
-        success: true,
-        message: 'user data fetched',
-        data: { id: req.user.id, email: req.user.email, role: req.user.role },
-      });
+    return res.status(200).json({
+      success: true,
+      message: 'user data fetched',
+      data: { id: req.user.id, email: req.user.email, role: req.user.role },
+    });
   } catch (e) {
     console.log('Auth.whoami error: ', e);
     return res
