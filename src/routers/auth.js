@@ -6,11 +6,12 @@ import {
   registerValidator,
   whoamiValidator,
 } from '../validators/auth.js';
+import { auth } from '../middleware/auth.js';
 
 const router = express.Router();
 
 router.post('/register', validate(registerValidator), register);
 router.post('/login', validate(loginValidator), login);
-router.get('/whoami', validate(whoamiValidator), whoami);
+router.get('/whoami', validate(whoamiValidator), auth([]), whoami);
 
 export { router as authRouter };
