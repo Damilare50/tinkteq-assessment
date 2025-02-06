@@ -20,7 +20,7 @@ app.use(cors());
 //routes
 app.use('/api/auth', authRouter);
 
-// connect to db
+// connect to db and start server(if db connection is successful)
 mongoose
   .connect(mongoUri, { dbName: 'rbac-task' })
   .then(() => {
