@@ -5,6 +5,9 @@ import mongoose from 'mongoose';
 import helmet from 'helmet';
 import cors from 'cors';
 import { authRouter } from './src/routers/auth.js';
+import { adminRouter } from './src/routers/admin.js';
+import { shipperRouter } from './src/routers/shipper.js';
+import { carrierRouter } from './src/routers/carrier.js';
 
 const appPort = parseInt(process.env.PORT);
 
@@ -19,6 +22,9 @@ app.use(cors());
 
 //routes
 app.use('/api/auth', authRouter);
+app.use('/api/admin', adminRouter);
+app.use('/api/shipper', shipperRouter);
+app.use('/api/carrier', carrierRouter);
 
 // connect to db and start server(if db connection is successful)
 mongoose

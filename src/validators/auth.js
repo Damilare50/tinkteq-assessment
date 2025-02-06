@@ -13,5 +13,3 @@ export const loginValidator = [
   body('email').isEmail(),
   body('password').isLength({ min: 6 }),
 ];
-
-export const whoamiValidator = [header('Authorization').isString()];
