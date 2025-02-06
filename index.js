@@ -30,7 +30,7 @@ app.use('/api/carrier', carrierRouter);
 mongoose
   .connect(mongoUri, { dbName: 'rbac-task' })
   .then(() => {
-    console.log('Connected to database');
+    console.log(`Connected to ${process.env.APP_MODE} database`);
     app.listen(appPort, () => {
       console.log(`Server started on port ${appPort}`);
     });
